@@ -72,4 +72,4 @@ Special thanks to:
 
 ## 📧 Contact
 For questions or suggestions, feel free to open an issue or contact:
-- GitHub: [YourUsername](https://github.com/alterwriter)
+- GitHub: [alterwriter](https://github.com/alterwriter)
