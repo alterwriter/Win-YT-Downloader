@@ -21,6 +21,9 @@
      choco install yt-dlp
      ```
 
+> If you find a forbidden issue, please update your yt-dlp using the following command:
+> `yt-dlp -U`
+
    - [FFmpeg](https://ffmpeg.org/): Required for MP3 extraction.
      ```bash
      choco install ffmpeg
