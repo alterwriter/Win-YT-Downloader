@@ -11,8 +11,11 @@ if (!(Test-Path -Path $OutputFolder)) {
     New-Item -ItemType Directory -Path $OutputFolder | Out-Null
 }
 
-# Define yt-dlp download command
-$ytDlpCommand = "yt-dlp --extract-audio --audio-format mp3 --output `"$OutputFolder\%(title)s.%(ext)s`" $YouTubeURL"
+# Encode URL to avoid special character issues
+$EncodedURL = [uri]::EscapeUriString($YouTubeURL)
+
+# Define yt-dlp download command (Ensure URL is properly enclosed)
+$ytDlpCommand = "yt-dlp --extract-audio --audio-format mp3 --output `"$OutputFolder\%(title)s.%(ext)s`" `"$EncodedURL`""
 
 # Run yt-dlp command
 Write-Host "Downloading and converting to MP3..."
@@ -22,4 +25,3 @@ try {
 } catch {
     Write-Host "An error occurred during the process: $_"
 }
-

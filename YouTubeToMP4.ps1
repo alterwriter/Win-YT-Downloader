@@ -11,7 +11,7 @@ if (!(Test-Path -Path $OutputFolder)) {
 }
 
 # Define yt-dlp download command
-$ytDlpCommand = "yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4' --merge-output-format mp4 --output `"$OutputFolder\%(title)s.%(ext)s`" $YouTubeURL"
+$ytDlpCommand = "yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4' --merge-output-format mp4 --output `"$OutputFolder\%(title)s.%(ext)s`" `"$EncodedURL`""
 
 # Run yt-dlp command
 Write-Host "Downloading YouTube video as MP4..."
