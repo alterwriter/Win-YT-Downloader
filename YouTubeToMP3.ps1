@@ -6,18 +6,14 @@ param(
     [string]$OutputFolder = "$PWD\Downloads\Music"  # Output directory for MP3s
 )
 
-# Create Output Folder if it doesn't exist
 if (!(Test-Path -Path $OutputFolder)) {
     New-Item -ItemType Directory -Path $OutputFolder | Out-Null
 }
 
-# Encode URL to avoid special character issues
 $EncodedURL = [uri]::EscapeUriString($YouTubeURL)
 
-# Define yt-dlp download command (Ensure URL is properly enclosed)
 $ytDlpCommand = "yt-dlp --extract-audio --audio-format mp3 --output `"$OutputFolder\%(title)s.%(ext)s`" `"$EncodedURL`""
 
-# Run yt-dlp command
 Write-Host "Downloading and converting to MP3..."
 try {
     Invoke-Expression $ytDlpCommand
