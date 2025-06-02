@@ -39,7 +39,7 @@
 ### Download YouTube Videos as MP4
 1. Clone this repository:
    ```bash
-   git clone https://github.com/alterwriter/YouTubeDownloaderScripts.git
+   git clone https://github.com/alterwriter/Win-YT-Downloader.git
    cd YouTubeDownloaderScripts
 
 2. Run the MP4 downloader:
