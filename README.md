@@ -40,7 +40,7 @@
 1. Clone this repository:
    ```bash
    git clone https://github.com/alterwriter/Win-YT-Downloader.git
-   cd YouTubeDownloaderScripts
+   cd Win-YT-Downloader
 
 2. Run the MP4 downloader:
     ```bash
